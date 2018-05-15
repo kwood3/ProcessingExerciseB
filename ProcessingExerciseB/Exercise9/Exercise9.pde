@@ -1,5 +1,5 @@
 /***********************************************
- Exercise 9 - Using array to draw rectangles    
+ Exercise 9 - Using array to draw lines  
  Written by Koby W. April 30, 2018
  
  The program gets the coordinates of 50 randomly generated points, if that point is closer to the top of the screen, the program will draw a line to the top.
