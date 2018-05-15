@@ -1,19 +1,43 @@
 /********************************
- Exercise 11
+ Exercise 12
  Written by Koby W.
  May 10 2018
  
  *Not Finished*
  
  This program loads text files and reads them to determine a certain amount of characters.
+ The same string function from exercise 11 was used to determine the characters.
  *********************************/
+
+
 
 void settings() {
   size(300, 300);
 }
 
 void setup() {
-  println(numberOfLetterT("hamlet.txt"));
+  String[] hamlet_ = loadStrings("hamlet.txt");                  //
+  String[] illiad_ = loadStrings("illiad.txt");                  //    
+  String[] macbeth_ = loadStrings("macbeth.txt");                //
+  String[] othello_ = loadStrings("othello.txt");                // Loading text files into string arrays
+  String[] romeoAndJuliet_ = loadStrings("romeoAndJuliet.txt");  //
+  String[] theOdyssey_ = loadStrings("theOdyssey.txt");          //
+  String[] theRepublic_ = loadStrings("theRepublic.txt");        //
+
+  String hamlet = join(hamlet_, "\n");                 //
+  String illiad = join(illiad_, "\n");                 //
+  String macbeth = join(macbeth_, "\n");               //
+  String othello = join(othello_, "\n");               //  Combining arrays into individual strings
+  String romeoAndJuliet = join(romeoAndJuliet_, "\n"); //
+  String theOdyssey = join(theOdyssey_, "\n");         //
+  String theRepublic = join(theRepublic_, "\n");       //
+  
+  
+  /*****************
+  Printing to console
+  *******************/
+  
+  println(numberOfLetterT(hamlet));
 }
 
 int numberOfLetterT(String fileToCheck) {
