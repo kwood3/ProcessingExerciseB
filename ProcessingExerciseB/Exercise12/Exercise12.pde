@@ -12,7 +12,7 @@
 
 
 void settings() {
-  size(300, 300);
+  size(400, 400);
 }
 
 void setup() {
@@ -31,13 +31,13 @@ void setup() {
   String romeoAndJuliet = join(romeoAndJuliet_, "\n"); //
   String theOdyssey = join(theOdyssey_, "\n");         //
   String theRepublic = join(theRepublic_, "\n");       //
-  
-  
+
+
   /*****************
-  Printing to console
-  *******************/
-  
-  println(numberOfLetterT(hamlet));
+   Printing to console
+   *******************/
+
+  println("Amount of Thous in macbeth: ", numberOfThous(macbeth));
 }
 
 int numberOfLetterT(String fileToCheck) {
@@ -49,4 +49,15 @@ int numberOfLetterT(String fileToCheck) {
     }
   }
   return amountOfTs;
+}
+
+int numberOfThous(String sentenceChecked) {
+  int amountOfThous = 0;
+  String[] words = sentenceChecked.split("\\s+");
+  for (int i = 0; i < words.length; i++) {
+    if (words[i] == "Thou" || words[i] == "thou") {
+      amountOfThous++;
+    }
+  }
+  return amountOfThous;
 }
